@@ -12,6 +12,7 @@ import io.kdomskia.compose.foundation.Image
 import io.kdomskia.compose.foundation.layout.Arrangement
 import io.kdomskia.compose.foundation.layout.Box
 import io.kdomskia.compose.foundation.layout.Column
+import io.kdomskia.compose.foundation.layout.Spacer
 import io.kdomskia.compose.foundation.layout.fillMaxHeight
 import io.kdomskia.compose.foundation.layout.height
 import io.kdomskia.compose.foundation.layout.padding
@@ -77,8 +78,10 @@ fun AppRail(
         ) {
             Column(
                 modifier = Modifier.fillMaxHeight(),
-                verticalArrangement = Arrangement.Center
+                verticalArrangement = Arrangement.Center,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Spacer(modifier = Modifier.weight(1f))
                 NavigationMenuItem.entries.forEach { menu ->
                     val selected = menu == selectedMenu
                     val color = if (selected) {
@@ -110,6 +113,9 @@ fun AppRail(
                         )
                     }
                 }
+                Spacer(modifier = Modifier.weight(1f))
+                PestoRepositoryIconButton()
+                Spacer(modifier = Modifier.height(dimens.paddingMedium))
             }
         }
     }

@@ -47,6 +47,10 @@ fun AppBar(
                 }
             }
         },
+        actions = {
+            if (isWindowWidthExpanded.not())
+                PestoRepositoryIconButton()
+        },
         titleHorizontalAlignment = Alignment.CenterHorizontally,
         expandedHeight = logoHeight + logoPadding,
         windowInsets = WindowInsets()
