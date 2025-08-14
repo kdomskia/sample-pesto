@@ -1,0 +1,24 @@
+.gradle
+.kotlin
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+*.iml
+*.ipr
+*.iws
+.idea
+
+### VS Code ###
+.vscode/
+
+### Mac OS ###
+.DS_Store
+/local.properties
+
+### Xcode ###
+*.xcuserstate
+**/xcuserdata
+/node_modules/

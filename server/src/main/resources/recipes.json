@@ -1,0 +1,842 @@
+[
+  {
+    "id": "a1b2c3d4e5f60123456789ab",
+    "title": "Spinach Filo Puffs",
+    "description": "Hearty, organic filo puffs that taste just a little better than homemade.",
+    "warnings": [
+      "GlutenFree",
+      "EggFree",
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Filo pastry sheets",
+        "amount": "250 g (~8 sheets)"
+      },
+      {
+        "description": "Fresh spinach (squeezed dry)",
+        "amount": "500 g"
+      },
+      {
+        "description": "Red onion, chopped",
+        "amount": "1 medium (~150 g)"
+      },
+      {
+        "description": "Spring onions, sliced",
+        "amount": "2 stalks"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "4 tbsp"
+      },
+      {
+        "description": "Vegetarian feta, crumbled",
+        "amount": "120 g"
+      },
+      {
+        "description": "Eggs, beaten",
+        "amount": "2 large"
+      },
+      {
+        "description": "Fresh dill, chopped",
+        "amount": "25 g"
+      },
+      {
+        "description": "Mint leaves, chopped",
+        "amount": "20 g"
+      },
+      {
+        "description": "Lemon zest",
+        "amount": "from 1 lemon"
+      },
+      {
+        "description": "Nutmeg",
+        "amount": "dash"
+      },
+      {
+        "description": "Salt & pepper",
+        "amount": "to taste"
+      }
+    ]
+  },
+  {
+    "id": "b2c3d4e5f6a70123456789bc",
+    "title": "Beef Pot Pies",
+    "description": "Hearty, organic beef pot pies that taste just a little better than homemade.",
+    "warnings": [
+      "GlutenFree",
+      "EggFree",
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare",
+      "NoAddedSugar"
+    ],
+    "ingredients": [
+      {
+        "description": "Sirloin steak or beef chuck, cubed",
+        "amount": "700 g (1.5 lbs)"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "3 tbsp"
+      },
+      {
+        "description": "Onion, diced",
+        "amount": "1 medium (~150 g)"
+      },
+      {
+        "description": "Carrots, diced",
+        "amount": "3 medium (~150 g)"
+      },
+      {
+        "description": "Celery stalks, diced",
+        "amount": "2 stalks (~100 g)"
+      },
+      {
+        "description": "Garlic cloves, minced",
+        "amount": "3 cloves"
+      },
+      {
+        "description": "Tomato paste",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "All‑purpose flour",
+        "amount": "3 tbsp"
+      },
+      {
+        "description": "Beef broth",
+        "amount": "500 ml"
+      },
+      {
+        "description": "Red wine or more broth",
+        "amount": "120 ml"
+      },
+      {
+        "description": "Worcestershire sauce",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Fresh thyme, chopped",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "Salt & pepper",
+        "amount": "to taste"
+      },
+      {
+        "description": "Frozen peas",
+        "amount": "¾ cup"
+      },
+      {
+        "description": "Yukon gold potatoes, cubed",
+        "amount": "250 g"
+      },
+      {
+        "description": "Pie pastry crust (top)",
+        "amount": "1 sheet (~250 g)"
+      },
+      {
+        "description": "Egg wash (optional)",
+        "amount": "1 egg yolk"
+      }
+    ]
+  },
+  {
+    "id": "c3d4e5f6a7b80123456789cd",
+    "title": "Creamy Pesto Pasta",
+    "description": "Gluten‑free spaghetti sautéed in garlic‑kale pesto for an easy healthy dinner.",
+    "warnings": [
+      "GlutenFree",
+      "EggFree",
+      "OrganicProduce",
+      "Vegetarian",
+      "LocallySourced",
+      "NoAddedSugar",
+      "LowSodium",
+      "AnimalWelfare"
+    ],
+    "ingredients": [
+      {
+        "description": "Basil",
+        "amount": "6 tbsp"
+      },
+      {
+        "description": "Gluten‑free Spaghetti",
+        "amount": "2 cups"
+      },
+      {
+        "description": "Garlic",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Ricotta",
+        "amount": "4 cups"
+      },
+      {
+        "description": "Kale",
+        "amount": "3 cups"
+      }
+    ]
+  },
+  {
+    "id": "d4e5f6a7b8c90123456789de",
+    "title": "Herb Roasted Chicken",
+    "description": "Hearty, organic roasted chicken that taste just a little better than homemade.",
+    "warnings": [
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Whole organic free‑range chicken",
+        "amount": "1 (3.8 lb / ~1.7 kg)"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "3 tbsp"
+      },
+      {
+        "description": "Kosher salt",
+        "amount": "1 tsp"
+      },
+      {
+        "description": "Black pepper",
+        "amount": "¼ tsp"
+      },
+      {
+        "description": "Garlic cloves, crushed",
+        "amount": "2 cloves"
+      },
+      {
+        "description": "Yellow onion, quartered",
+        "amount": "½ onion"
+      },
+      {
+        "description": "Fresh herbs (rosemary, thyme, parsley)",
+        "amount": "½ cup chopped"
+      },
+      {
+        "description": "Lemon, halved",
+        "amount": "1 lemon"
+      }
+    ]
+  },
+  {
+    "id": "e5f6a7b8c9d0123456789efa",
+    "title": "Ocean Foam & Seaweed Sensory Plate",
+    "description": "Sea‑foam–topped seafood presentation with smoked fish and crunchy tapioca sand.",
+    "warnings": [
+      "SustainableSeafood",
+      "LocallySourced",
+      "NoAddedSugar"
+    ],
+    "ingredients": [
+      {
+        "description": "Kingfish fillet",
+        "amount": "120 g"
+      },
+      {
+        "description": "Konbu strip (4 in)",
+        "amount": "1 piece"
+      },
+      {
+        "description": "Smoked mackerel",
+        "amount": "100 g"
+      },
+      {
+        "description": "Seaweed broth",
+        "amount": "250 ml"
+      },
+      {
+        "description": "Tapioca starch",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "Japanese breadcrumbs",
+        "amount": "30 g"
+      },
+      {
+        "description": "Dried seaweeds",
+        "amount": "10 g"
+      },
+      {
+        "description": "Sea salt",
+        "amount": "pinch"
+      }
+    ]
+  },
+  {
+    "id": "f6a7b8c9d0e1234567890fab",
+    "title": "Truffle‑infused Bird’s Nest Consommé",
+    "description": "Chilled consommé with edible bird’s nest and shaved truffle ribbons.",
+    "warnings": [
+      "LocallySourced"
+    ],
+    "ingredients": [
+      {
+        "description": "Chicken consommé",
+        "amount": "100 ml"
+      },
+      {
+        "description": "Edible bird’s nest",
+        "amount": "3 g"
+      },
+      {
+        "description": "Black truffle shave",
+        "amount": "2 g"
+      },
+      {
+        "description": "Salt",
+        "amount": "pinch"
+      },
+      {
+        "description": "White pepper",
+        "amount": "dash"
+      }
+    ]
+  },
+  {
+    "id": "a7b8c9d0e1f234567890abcd",
+    "title": "Carrot‑Cabbage Mosaic Terrine",
+    "description": "Layered vegetable mosaic in light gel, garnished with herb oil.",
+    "warnings": [
+      "Vegan",
+      "GlutenFree",
+      "OrganicProduce",
+      "LocallySourced",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Heirloom carrots",
+        "amount": "100 g"
+      },
+      {
+        "description": "Red cabbage",
+        "amount": "80 g"
+      },
+      {
+        "description": "Shallots",
+        "amount": "30 g"
+      },
+      {
+        "description": "Vegetable stock",
+        "amount": "200 ml"
+      },
+      {
+        "description": "Agar‑agar",
+        "amount": "2 g"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Herb oil",
+        "amount": "5 ml"
+      }
+    ]
+  },
+  {
+    "id": "b8c9d0e1f2a345678901bcde",
+    "title": "Beet Risotto with Gorgonzola Velvet",
+    "description": "Beet‑infused risotto with gorgonzola cream swirl.",
+    "warnings": [
+      "Vegetarian",
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare"
+    ],
+    "ingredients": [
+      {
+        "description": "Carnaroli rice",
+        "amount": "100 g"
+      },
+      {
+        "description": "Beet purée",
+        "amount": "80 g"
+      },
+      {
+        "description": "Gorgonzola cheese",
+        "amount": "30 g"
+      },
+      {
+        "description": "Onion",
+        "amount": "30 g"
+      },
+      {
+        "description": "Vegetable stock",
+        "amount": "500 ml"
+      },
+      {
+        "description": "Butter",
+        "amount": "15 g"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "1 tbsp"
+      }
+    ]
+  },
+  {
+    "id": "c9d0e1f2a3b456789012cdef",
+    "title": "Miso‑Citrus Portobello Stack",
+    "description": "Miso‑citrus glazed portobello steaks over edamame and basil garnish.",
+    "warnings": [
+      "Vegan",
+      "OrganicProduce",
+      "LocallySourced",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Portobello caps",
+        "amount": "2 large (~200 g)"
+      },
+      {
+        "description": "White miso paste",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "Yuzu juice",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Shelled edamame",
+        "amount": "½ cup"
+      },
+      {
+        "description": "Basil chiffonade",
+        "amount": "¼ cup"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Honey",
+        "amount": "1 tsp"
+      }
+    ]
+  },
+  {
+    "id": "d0e1f2a3b4c567890123def0",
+    "title": "Mini Croque‑Monsieur with Truffle Essence",
+    "description": "Tiny Croque‑Monsieur squares with melted cheese and truffle oil.",
+    "warnings": [
+      "Vegetarian",
+      "AnimalWelfare",
+      "LocallySourced"
+    ],
+    "ingredients": [
+      {
+        "description": "Brioche bread",
+        "amount": "4 small slices"
+      },
+      {
+        "description": "Emmental cheese",
+        "amount": "50 g"
+      },
+      {
+        "description": "Cream",
+        "amount": "20 ml"
+      },
+      {
+        "description": "Ham (optional)",
+        "amount": "30 g"
+      },
+      {
+        "description": "Truffle oil",
+        "amount": "½ tsp"
+      },
+      {
+        "description": "Butter",
+        "amount": "10 g"
+      }
+    ]
+  },
+  {
+    "id": "e1f2a3b4c5d678901234ef01",
+    "title": "Snail‑Porridge Amuse‑Bouche",
+    "description": "Oat‑based snail porridge with parsley oil and garlic confit.",
+    "warnings": [
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare"
+    ],
+    "ingredients": [
+      {
+        "description": "Escargots",
+        "amount": "6 (~50 g)"
+      },
+      {
+        "description": "Rolled oats",
+        "amount": "30 g"
+      },
+      {
+        "description": "Garlic confit",
+        "amount": "1 tsp"
+      },
+      {
+        "description": "Parsley oil",
+        "amount": "5 ml"
+      },
+      {
+        "description": "Wood sorrel",
+        "amount": "5 g"
+      },
+      {
+        "description": "Butter",
+        "amount": "10 g"
+      }
+    ]
+  },
+  {
+    "id": "f2a3b4c5d6e789012345f012",
+    "title": "Egg & Bacon Ice‑Cream with Smoky Cereal",
+    "description": "Savory ice‑cream of egg yolk and bacon, topped with smoky parsnip cereal.",
+    "warnings": [
+      "AnimalWelfare",
+      "NoAddedSugar"
+    ],
+    "ingredients": [
+      {
+        "description": "Egg yolks",
+        "amount": "3 large"
+      },
+      {
+        "description": "Bacon fat infusion",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "Cream",
+        "amount": "100 ml"
+      },
+      {
+        "description": "Parsnip shavings",
+        "amount": "½ cup"
+      },
+      {
+        "description": "Sugar",
+        "amount": "10 g"
+      },
+      {
+        "description": "Salt",
+        "amount": "pinch"
+      }
+    ]
+  },
+  {
+    "id": "a3b4c5d6e7f890123456f123",
+    "title": "Foie Gras & Mandarin Air Cushion",
+    "description": "Foie gras terrine under mandarin‑foam air cushion on brioche crisp.",
+    "warnings": [
+      "AnimalWelfare",
+      "LocallySourced"
+    ],
+    "ingredients": [
+      {
+        "description": "Foie gras terrine",
+        "amount": "50 g"
+      },
+      {
+        "description": "Mandarin juice",
+        "amount": "20 ml"
+      },
+      {
+        "description": "Lecithin",
+        "amount": "0.5 g"
+      },
+      {
+        "description": "Brioche crisp",
+        "amount": "1 piece"
+      },
+      {
+        "description": "Microgreens",
+        "amount": "5 g"
+      }
+    ]
+  },
+  {
+    "id": "b4c5d6e7f8a901234567f234",
+    "title": "Shredded Lamb with Pomegranate Salad",
+    "description": "Spiced lamb shredded over pomegranate‑mint salad with yogurt dressing.",
+    "warnings": [
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Lamb shoulder",
+        "amount": "120 g"
+      },
+      {
+        "description": "Shaanxi spice blend",
+        "amount": "1 tsp"
+      },
+      {
+        "description": "Pomegranate seeds",
+        "amount": "¼ cup"
+      },
+      {
+        "description": "Mint leaves",
+        "amount": "10 g"
+      },
+      {
+        "description": "Yogurt dressing",
+        "amount": "2 tbsp"
+      },
+      {
+        "description": "Spring onion",
+        "amount": "1 stalk"
+      }
+    ]
+  },
+  {
+    "id": "c5d6e7f8a9b012345678f345",
+    "title": "Egg Jeannette Redux",
+    "description": "Garlic‑parsley‑mustard‑yolk paste in seared egg halves with vinaigrette.",
+    "warnings": [
+      "Vegetarian",
+      "AnimalWelfare",
+      "LocallySourced"
+    ],
+    "ingredients": [
+      {
+        "description": "Hard‑boiled eggs",
+        "amount": "2 eggs"
+      },
+      {
+        "description": "Garlic",
+        "amount": "1 clove"
+      },
+      {
+        "description": "Parsley",
+        "amount": "1 tbsp chopped"
+      },
+      {
+        "description": "Milk",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Mustard",
+        "amount": "1 tsp"
+      },
+      {
+        "description": "Butter",
+        "amount": "5 g"
+      }
+    ]
+  },
+  {
+    "id": "d6e7f8a9b0c123456789f456",
+    "title": "Artichoke Tagine with Peas & Apricot",
+    "description": "Chicken tagine with artichoke hearts, peas, and apricot compote.",
+    "warnings": [
+      "OrganicProduce",
+      "LocallySourced",
+      "AnimalWelfare",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Chicken thighs",
+        "amount": "150 g"
+      },
+      {
+        "description": "Artichoke hearts",
+        "amount": "80 g"
+      },
+      {
+        "description": "Peas",
+        "amount": "½ cup"
+      },
+      {
+        "description": "Apricots",
+        "amount": "¼ cup diced"
+      },
+      {
+        "description": "Cumin",
+        "amount": "½ tsp"
+      },
+      {
+        "description": "Coriander",
+        "amount": "½ tsp"
+      },
+      {
+        "description": "Chicken stock",
+        "amount": "200 ml"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "1 tbsp"
+      }
+    ]
+  },
+  {
+    "id": "e7f8a9b0c1d234567890f567",
+    "title": "Double Mushroom Velouté & Herb Chantilly",
+    "description": "Mushroom soup topped with herb‑infused crème fraîche foam.",
+    "warnings": [
+      "Vegetarian",
+      "GlutenFree",
+      "OrganicProduce",
+      "LocallySourced",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Shiitake mushrooms",
+        "amount": "50 g"
+      },
+      {
+        "description": "Button mushrooms",
+        "amount": "50 g"
+      },
+      {
+        "description": "Onion",
+        "amount": "30 g"
+      },
+      {
+        "description": "Vegetable stock",
+        "amount": "400 ml"
+      },
+      {
+        "description": "Cream",
+        "amount": "50 ml"
+      },
+      {
+        "description": "Crème fraîche",
+        "amount": "20 ml"
+      },
+      {
+        "description": "Fresh herbs",
+        "amount": "10 g"
+      }
+    ]
+  },
+  {
+    "id": "f8a9b0c1d2e345678901f678",
+    "title": "Citrus‑Langoustine Tartare with Lemon Consommé",
+    "description": "Yuzu‑dressed langoustine tartare with frozen lemon consommé sphere.",
+    "warnings": [
+      "SustainableSeafood",
+      "LocallySourced",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "Langoustine tails",
+        "amount": "80 g"
+      },
+      {
+        "description": "Yuzu juice",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Shallot",
+        "amount": "1 tbsp finely chopped"
+      },
+      {
+        "description": "Olive oil",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Lemon consommé sphere",
+        "amount": "30 ml"
+      },
+      {
+        "description": "Micro basil",
+        "amount": "2 g"
+      }
+    ]
+  },
+  {
+    "id": "a9b0c1d2e3f456789012f789",
+    "title": "Beer Brioche with Truffle Honey Butter",
+    "description": "Beer‑infused brioche served with truffle‑honey butter.",
+    "warnings": [
+      "Vegetarian",
+      "AnimalWelfare",
+      "LocallySourced"
+    ],
+    "ingredients": [
+      {
+        "description": "Strong flour",
+        "amount": "150 g"
+      },
+      {
+        "description": "Beer",
+        "amount": "50 ml"
+      },
+      {
+        "description": "Butter",
+        "amount": "20 g"
+      },
+      {
+        "description": "Egg yolk",
+        "amount": "1 yolk"
+      },
+      {
+        "description": "Black truffle honey",
+        "amount": "1 tbsp"
+      },
+      {
+        "description": "Yeast",
+        "amount": "5 g"
+      }
+    ]
+  },
+  {
+    "id": "b0c1d2e3f4a567890123f890",
+    "title": "Molecular White Chocolate Caviar Sphere",
+    "description": "White chocolate sphere filled with fish‑roe gel pearls.",
+    "warnings": [
+      "SustainableSeafood",
+      "LocallySourced",
+      "NoAddedSugar",
+      "LowSodium"
+    ],
+    "ingredients": [
+      {
+        "description": "White chocolate",
+        "amount": "30 g"
+      },
+      {
+        "description": "Fish roe",
+        "amount": "5 g"
+      },
+      {
+        "description": "Gelatin",
+        "amount": "1 g"
+      },
+      {
+        "description": "Cream",
+        "amount": "20 ml"
+      },
+      {
+        "description": "Salt",
+        "amount": "pinch"
+      },
+      {
+        "description": "Citrus zest",
+        "amount": "1 tsp"
+      }
+    ]
+  }
+]
