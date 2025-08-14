@@ -3,7 +3,7 @@ package io.kdomskia.sample.pesto.domain.model.recipe
 import kotlinx.serialization.Serializable
 
 @Serializable
-enum class RecipeWarning {
+enum class RecipeLabel {
 
     GlutenFree,
     EggFree,

@@ -1,6 +1,6 @@
 package io.kdomskia.sample.pesto.controller
 
-import io.kdomskia.sample.pesto.recipe.Recipe
+import io.kdomskia.sample.pesto.domain.model.recipe.Recipe
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream

@@ -1,18 +1,18 @@
 package io.kdomskia.sample.pesto.ui.extension
 
 import io.kdomskia.sample.pesto.Res
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.AnimalWelfare
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.EggFree
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.GlutenFree
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.LocallySourced
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.LowSodium
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.NoAddedSugar
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.NutFree
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.OrganicProduce
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.SustainableSeafood
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.Vegan
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning.Vegetarian
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.AnimalWelfare
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.EggFree
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.GlutenFree
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.LocallySourced
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.LowSodium
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.NoAddedSugar
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.NutFree
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.OrganicProduce
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.SustainableSeafood
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.Vegan
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel.Vegetarian
 import io.kdomskia.sample.pesto.ic_animal_welfare
 import io.kdomskia.sample.pesto.ic_egg_free
 import io.kdomskia.sample.pesto.ic_gluten_free
@@ -27,7 +27,7 @@ import io.kdomskia.sample.pesto.ic_vegetarian
 import io.kdomskia.sample.pesto.ui.res.strings
 import org.jetbrains.compose.resources.DrawableResource
 
-val RecipeWarning.label: String
+val RecipeLabel.text: String
     get() = when (this) {
         GlutenFree -> strings.glutenFree
         EggFree -> strings.eggFree
@@ -42,7 +42,7 @@ val RecipeWarning.label: String
         AnimalWelfare -> strings.animalWelfare
     }
 
-val RecipeWarning.icon: DrawableResource
+val RecipeLabel.icon: DrawableResource
     get() = when (this) {
         GlutenFree -> Res.drawable.ic_gluten_free
         EggFree -> Res.drawable.ic_egg_free

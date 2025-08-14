@@ -3,7 +3,7 @@
     "id": "a1b2c3d4e5f60123456789ab",
     "title": "Spinach Filo Puffs",
     "description": "Hearty, organic filo puffs that taste just a little better than homemade.",
-    "warnings": [
+    "labels": [
       "GlutenFree",
       "EggFree",
       "OrganicProduce",
@@ -67,7 +67,7 @@
     "id": "b2c3d4e5f6a70123456789bc",
     "title": "Beef Pot Pies",
     "description": "Hearty, organic beef pot pies that taste just a little better than homemade.",
-    "warnings": [
+    "labels": [
       "GlutenFree",
       "EggFree",
       "OrganicProduce",
@@ -150,7 +150,7 @@
     "id": "c3d4e5f6a7b80123456789cd",
     "title": "Creamy Pesto Pasta",
     "description": "Gluten‑free spaghetti sautéed in garlic‑kale pesto for an easy healthy dinner.",
-    "warnings": [
+    "labels": [
       "GlutenFree",
       "EggFree",
       "OrganicProduce",
@@ -187,7 +187,7 @@
     "id": "d4e5f6a7b8c90123456789de",
     "title": "Herb Roasted Chicken",
     "description": "Hearty, organic roasted chicken that taste just a little better than homemade.",
-    "warnings": [
+    "labels": [
       "OrganicProduce",
       "LocallySourced",
       "AnimalWelfare",
@@ -233,7 +233,7 @@
     "id": "e5f6a7b8c9d0123456789efa",
     "title": "Ocean Foam & Seaweed Sensory Plate",
     "description": "Sea‑foam–topped seafood presentation with smoked fish and crunchy tapioca sand.",
-    "warnings": [
+    "labels": [
       "SustainableSeafood",
       "LocallySourced",
       "NoAddedSugar"
@@ -277,7 +277,7 @@
     "id": "f6a7b8c9d0e1234567890fab",
     "title": "Truffle‑infused Bird’s Nest Consommé",
     "description": "Chilled consommé with edible bird’s nest and shaved truffle ribbons.",
-    "warnings": [
+    "labels": [
       "LocallySourced"
     ],
     "ingredients": [
@@ -307,7 +307,7 @@
     "id": "a7b8c9d0e1f234567890abcd",
     "title": "Carrot‑Cabbage Mosaic Terrine",
     "description": "Layered vegetable mosaic in light gel, garnished with herb oil.",
-    "warnings": [
+    "labels": [
       "Vegan",
       "GlutenFree",
       "OrganicProduce",
@@ -350,7 +350,7 @@
     "id": "b8c9d0e1f2a345678901bcde",
     "title": "Beet Risotto with Gorgonzola Velvet",
     "description": "Beet‑infused risotto with gorgonzola cream swirl.",
-    "warnings": [
+    "labels": [
       "Vegetarian",
       "OrganicProduce",
       "LocallySourced",
@@ -391,7 +391,7 @@
     "id": "c9d0e1f2a3b456789012cdef",
     "title": "Miso‑Citrus Portobello Stack",
     "description": "Miso‑citrus glazed portobello steaks over edamame and basil garnish.",
-    "warnings": [
+    "labels": [
       "Vegan",
       "OrganicProduce",
       "LocallySourced",
@@ -433,7 +433,7 @@
     "id": "d0e1f2a3b4c567890123def0",
     "title": "Mini Croque‑Monsieur with Truffle Essence",
     "description": "Tiny Croque‑Monsieur squares with melted cheese and truffle oil.",
-    "warnings": [
+    "labels": [
       "Vegetarian",
       "AnimalWelfare",
       "LocallySourced"
@@ -469,7 +469,7 @@
     "id": "e1f2a3b4c5d678901234ef01",
     "title": "Snail‑Porridge Amuse‑Bouche",
     "description": "Oat‑based snail porridge with parsley oil and garlic confit.",
-    "warnings": [
+    "labels": [
       "OrganicProduce",
       "LocallySourced",
       "AnimalWelfare"
@@ -505,7 +505,7 @@
     "id": "f2a3b4c5d6e789012345f012",
     "title": "Egg & Bacon Ice‑Cream with Smoky Cereal",
     "description": "Savory ice‑cream of egg yolk and bacon, topped with smoky parsnip cereal.",
-    "warnings": [
+    "labels": [
       "AnimalWelfare",
       "NoAddedSugar"
     ],
@@ -540,7 +540,7 @@
     "id": "a3b4c5d6e7f890123456f123",
     "title": "Foie Gras & Mandarin Air Cushion",
     "description": "Foie gras terrine under mandarin‑foam air cushion on brioche crisp.",
-    "warnings": [
+    "labels": [
       "AnimalWelfare",
       "LocallySourced"
     ],
@@ -571,7 +571,7 @@
     "id": "b4c5d6e7f8a901234567f234",
     "title": "Shredded Lamb with Pomegranate Salad",
     "description": "Spiced lamb shredded over pomegranate‑mint salad with yogurt dressing.",
-    "warnings": [
+    "labels": [
       "OrganicProduce",
       "LocallySourced",
       "AnimalWelfare",
@@ -609,7 +609,7 @@
     "id": "c5d6e7f8a9b012345678f345",
     "title": "Egg Jeannette Redux",
     "description": "Garlic‑parsley‑mustard‑yolk paste in seared egg halves with vinaigrette.",
-    "warnings": [
+    "labels": [
       "Vegetarian",
       "AnimalWelfare",
       "LocallySourced"
@@ -645,7 +645,7 @@
     "id": "d6e7f8a9b0c123456789f456",
     "title": "Artichoke Tagine with Peas & Apricot",
     "description": "Chicken tagine with artichoke hearts, peas, and apricot compote.",
-    "warnings": [
+    "labels": [
       "OrganicProduce",
       "LocallySourced",
       "AnimalWelfare",
@@ -691,7 +691,7 @@
     "id": "e7f8a9b0c1d234567890f567",
     "title": "Double Mushroom Velouté & Herb Chantilly",
     "description": "Mushroom soup topped with herb‑infused crème fraîche foam.",
-    "warnings": [
+    "labels": [
       "Vegetarian",
       "GlutenFree",
       "OrganicProduce",
@@ -733,7 +733,7 @@
     "id": "f8a9b0c1d2e345678901f678",
     "title": "Citrus‑Langoustine Tartare with Lemon Consommé",
     "description": "Yuzu‑dressed langoustine tartare with frozen lemon consommé sphere.",
-    "warnings": [
+    "labels": [
       "SustainableSeafood",
       "LocallySourced",
       "NoAddedSugar",
@@ -770,7 +770,7 @@
     "id": "a9b0c1d2e3f456789012f789",
     "title": "Beer Brioche with Truffle Honey Butter",
     "description": "Beer‑infused brioche served with truffle‑honey butter.",
-    "warnings": [
+    "labels": [
       "Vegetarian",
       "AnimalWelfare",
       "LocallySourced"
@@ -806,7 +806,7 @@
     "id": "b0c1d2e3f4a567890123f890",
     "title": "Molecular White Chocolate Caviar Sphere",
     "description": "White chocolate sphere filled with fish‑roe gel pearls.",
-    "warnings": [
+    "labels": [
       "SustainableSeafood",
       "LocallySourced",
       "NoAddedSugar",

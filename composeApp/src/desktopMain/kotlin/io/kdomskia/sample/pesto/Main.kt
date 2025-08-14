@@ -18,7 +18,7 @@ fun main() = application {
             position = WindowPosition.Aligned(Alignment.Center),
             size = initialWindowSize
         ),
-        title = "Kdomskia",
+        title = "Kdomskia - Pesto",
         alwaysOnTop = true
     ) {
         App()

@@ -52,7 +52,7 @@ import io.kdomskia.compose.ui.unit.pxToDp
 import io.kdomskia.sample.pesto.Res
 import io.kdomskia.sample.pesto.domain.model.recipe.Recipe
 import io.kdomskia.sample.pesto.domain.model.recipe.RecipeIngredient
-import io.kdomskia.sample.pesto.domain.model.recipe.RecipeWarning
+import io.kdomskia.sample.pesto.domain.model.recipe.RecipeLabel
 import io.kdomskia.sample.pesto.ic_plus
 import io.kdomskia.sample.pesto.ic_recipes
 import io.kdomskia.sample.pesto.ui.component.AppBar
@@ -61,7 +61,7 @@ import io.kdomskia.sample.pesto.ui.component.ErrorStateContainer
 import io.kdomskia.sample.pesto.ui.component.recipe.RecipeImage
 import io.kdomskia.sample.pesto.ui.extension.getBottom
 import io.kdomskia.sample.pesto.ui.extension.icon
-import io.kdomskia.sample.pesto.ui.extension.label
+import io.kdomskia.sample.pesto.ui.extension.text
 import io.kdomskia.sample.pesto.ui.extension.use
 import io.kdomskia.sample.pesto.ui.model.recipe.RecipeDetailViewModel
 import io.kdomskia.sample.pesto.ui.res.dimens
@@ -172,8 +172,8 @@ private fun RecipeDetailContent(
                     recipe = recipe,
                     style = style
                 )
-                Warnings(
-                    warnings = recipe.warnings,
+                Labels(
+                    labels = recipe.labels,
                     style = style
                 )
                 Ingredients(
@@ -280,8 +280,8 @@ private fun Content(
 }
 
 @Composable
-private fun Warnings(
-    warnings: List<RecipeWarning>,
+private fun Labels(
+    labels: List<RecipeLabel>,
     style: RecipeDetailStyle
 ) {
     FlowRow(
@@ -297,26 +297,26 @@ private fun Warnings(
             alignment = Alignment.CenterHorizontally
         )
     ) {
-        warnings.forEach {
-            WarningItem(it)
+        labels.forEach {
+            LabelItem(it)
         }
     }
 }
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-private fun WarningItem(
-    warning: RecipeWarning
+private fun LabelItem(
+    label: RecipeLabel
 ) {
     Row(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Image(
-            img = warning.icon.img,
+            img = label.icon.img,
             contentDescription = null
         )
         Text(
-            text = warning.label,
+            text = label.text,
             modifier = Modifier.padding(start = dimens.paddingSmall),
             color = MaterialTheme.colorScheme.primary,
             style = MaterialTheme.typography.titleSmall

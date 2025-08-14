@@ -10,8 +10,8 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.appendIfNameAbsent
 import kotlinx.serialization.json.Json
 
-//const val BASE_URL = "http://192.168.1.186:8080"//
-const val BASE_URL = "http://192.168.0.47:8080"
+const val BASE_URL = "http://192.168.1.186:8080"//
+//const val BASE_URL = "http://192.168.0.47:8080"
 
 fun provideHttpClient() = HttpClient {
     defaultRequest {

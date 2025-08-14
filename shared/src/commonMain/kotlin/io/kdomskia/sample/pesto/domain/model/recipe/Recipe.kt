@@ -1,4 +1,4 @@
-package io.kdomskia.sample.pesto.recipe
+package io.kdomskia.sample.pesto.domain.model.recipe
 
 import kotlinx.serialization.Serializable
 
@@ -8,6 +8,6 @@ data class Recipe(
     val title: String,
     val description: String,
     val imgUrl: String? = null,
-    val warnings: List<RecipeWarning>,
+    val labels: List<RecipeLabel>,
     val ingredients: List<RecipeIngredient>
 )
