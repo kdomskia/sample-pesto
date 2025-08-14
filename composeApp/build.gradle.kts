@@ -196,3 +196,8 @@ fun KotlinDependencyHandler.devNpm(
     name = name,
     version = version.get()
 )
+
+tasks.register<JavaExec>("desktopRun") {
+    classpath = sourceSets["desktopMain"].runtimeClasspath
+    mainClass.set(compose.desktop.application.mainClass)
+}

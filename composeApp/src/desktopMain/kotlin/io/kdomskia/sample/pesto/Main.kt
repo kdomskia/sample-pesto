@@ -19,7 +19,7 @@ fun main() = application {
             size = initialWindowSize
         ),
         title = "Kdomskia - Pesto",
-        alwaysOnTop = true
+        alwaysOnTop = isRunningWithHotReload()
     ) {
         App()
     }
@@ -52,3 +52,9 @@ private val initialWindowSize: DpSize
             height = min(maxWindowSize.height, screenSize.height)
         )
     }
+
+private fun isRunningWithHotReload(): Boolean {
+    return System.getProperties().any { (key, _) ->
+        (key as? String)?.contains("compose.reload") == true
+    }
+}
