@@ -6,4 +6,6 @@ object ExternalLink {
 
     val pestoRepository = "https://github.com/kdomskia/sample-pesto"
 
+    val pestoFigmaPrototype = "https://www.figma.com/community/file/1199784060037728858"
+
 }

@@ -2,9 +2,8 @@ package io.kdomskia.sample.pesto.ui.component
 
 import androidx.compose.runtime.Composable
 import io.kdomskia.compose.foundation.layout.Box
-import io.kdomskia.compose.foundation.layout.FloatingContainer
 import io.kdomskia.compose.foundation.layout.PaddingValues
-import io.kdomskia.compose.foundation.layout.Placement
+import io.kdomskia.compose.foundation.layout.ViewportContainer
 import io.kdomskia.compose.foundation.layout.WindowInsets
 import io.kdomskia.compose.foundation.layout.WindowInsetsSides
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
@@ -14,6 +13,7 @@ import io.kdomskia.compose.foundation.layout.safeDrawing
 import io.kdomskia.compose.material3.DrawerState
 import io.kdomskia.compose.material3.ModalNavigationDrawer
 import io.kdomskia.compose.material3.Surface
+import io.kdomskia.compose.ui.Alignment
 import io.kdomskia.compose.ui.Modifier
 import io.kdomskia.compose.ui.draw.clipToBounds
 import io.kdomskia.sample.pesto.ui.extension.asPaddingValues
@@ -111,9 +111,8 @@ private fun ExpandedWindowNavigableContainer(
         ) {
             content()
         }
-        FloatingContainer(
-            horizontalPlacement = Placement.Horizontal.AlignStart(),
-            verticalPlacement = Placement.Vertical.Fill()
+        ViewportContainer(
+            contentAlignment = Alignment.CenterStart
         ) {
             AppRail(
                 actionType = actionType,

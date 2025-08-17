@@ -24,14 +24,14 @@ import io.kdomskia.compose.foundation.layout.Arrangement
 import io.kdomskia.compose.foundation.layout.Box
 import io.kdomskia.compose.foundation.layout.BoxWithConstraints
 import io.kdomskia.compose.foundation.layout.Column
-import io.kdomskia.compose.foundation.layout.FloatingContainer
 import io.kdomskia.compose.foundation.layout.FlowRow
 import io.kdomskia.compose.foundation.layout.PaddingValues
-import io.kdomskia.compose.foundation.layout.Placement
 import io.kdomskia.compose.foundation.layout.Row
 import io.kdomskia.compose.foundation.layout.RowScope
+import io.kdomskia.compose.foundation.layout.ViewportContainer
 import io.kdomskia.compose.foundation.layout.WindowInsets
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
+import io.kdomskia.compose.foundation.layout.fillViewportWidth
 import io.kdomskia.compose.foundation.layout.height
 import io.kdomskia.compose.foundation.layout.padding
 import io.kdomskia.compose.foundation.layout.safeDrawing
@@ -129,21 +129,24 @@ private fun RecipeDetailContent(
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.background)
     ) {
-        FloatingContainer(
-            horizontalPlacement = Placement.Horizontal.Fill(
-                paddingStart = paddingStart
-            ),
-            verticalPlacement = Placement.Vertical.AlignTop()
+        ViewportContainer(
+            contentAlignment = Alignment.TopCenter
         ) {
-            AppBar(
-                modifier = Modifier.onGloballyPositioned {
-                    headerHeight = it.size.height
-                },
-                onIconClick = onClose,
-                iconType = AppBarIconType.Close,
-                logoHeight = logoHeight,
-                logoPadding = dimens.paddingExtraLarge
-            )
+            Box(
+                modifier = Modifier
+                    .fillViewportWidth()
+                    .padding(start = paddingStart)
+            ) {
+                AppBar(
+                    modifier = Modifier.onGloballyPositioned {
+                        headerHeight = it.size.height
+                    },
+                    onIconClick = onClose,
+                    iconType = AppBarIconType.Close,
+                    logoHeight = logoHeight,
+                    logoPadding = dimens.paddingExtraLarge
+                )
+            }
         }
         Column(
             modifier = Modifier
@@ -182,15 +185,18 @@ private fun RecipeDetailContent(
                 )
             }
         }
-        FloatingContainer(
-            horizontalPlacement = Placement.Horizontal.AlignCenter(
-                paddingStart = paddingStart
-            ),
-            verticalPlacement = Placement.Vertical.AlignBottom(
-                paddingBottom = paddingBottom
-            )
+        ViewportContainer(
+            contentAlignment = Alignment.BottomCenter
         ) {
-            StartCookingButton()
+            Box(
+                modifier = Modifier
+                    .padding(
+                        start = paddingStart,
+                        bottom = paddingBottom
+                    )
+            ) {
+                StartCookingButton()
+            }
         }
     }
 }

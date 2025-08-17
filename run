@@ -1,0 +1,1 @@
+java -jar server/build/libs/server-1.0.0.jar --server.address="192.168.1.186"

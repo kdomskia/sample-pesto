@@ -1,12 +1,13 @@
 package io.kdomskia.sample.pesto.ui.navigation
 
-import io.kdomskia.sample.pesto.ui.navigation.destination.AppDestination
-import io.kdomskia.sample.pesto.ui.res.strings
 import io.kdomskia.sample.pesto.Res
+import io.kdomskia.sample.pesto.ic_about
 import io.kdomskia.sample.pesto.ic_account
 import io.kdomskia.sample.pesto.ic_notes
 import io.kdomskia.sample.pesto.ic_recipes
 import io.kdomskia.sample.pesto.ic_settings
+import io.kdomskia.sample.pesto.ui.navigation.destination.AppDestination
+import io.kdomskia.sample.pesto.ui.res.strings
 import org.jetbrains.compose.resources.DrawableResource
 
 enum class NavigationMenuItem(
@@ -32,6 +33,11 @@ enum class NavigationMenuItem(
     Settings(
         label = strings.settings,
         icon = Res.drawable.ic_settings
+    ),
+
+    About(
+        label = strings.about,
+        icon = Res.drawable.ic_about
     )
 
 }
@@ -42,4 +48,5 @@ val NavigationMenuItem.destination: AppDestination
         NavigationMenuItem.Recipes -> AppDestination.RecipeList
         NavigationMenuItem.Account -> AppDestination.Account
         NavigationMenuItem.Settings -> AppDestination.Settings
+        NavigationMenuItem.About -> AppDestination.About
     }

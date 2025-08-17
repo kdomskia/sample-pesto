@@ -39,14 +39,8 @@ object DimenResource {
 
     val recipeDetailMaxWidth = 1200.dp
 
+    val aboutMaxWidth = 800.dp
+
     val imageAspectRatio = 0.57f
 
 }
-
-val recipeHorizontalPadding: Dp
-    @Composable
-    get() = if (isWindowWidthExpanded) {
-        dimens.recipeHorizontalExtendedPadding
-    } else {
-        dimens.none
-    }

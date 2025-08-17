@@ -11,13 +11,10 @@ import io.kdomskia.compose.foundation.HorizontalPager
 import io.kdomskia.compose.foundation.PagerState
 import io.kdomskia.compose.foundation.background
 import io.kdomskia.compose.foundation.layout.Box
-import io.kdomskia.compose.foundation.layout.BoxScope
 import io.kdomskia.compose.foundation.layout.BoxWithConstraints
 import io.kdomskia.compose.foundation.layout.Column
-import io.kdomskia.compose.foundation.layout.FloatingContainer
 import io.kdomskia.compose.foundation.layout.PaddingValues
-import io.kdomskia.compose.foundation.layout.Placement.Horizontal
-import io.kdomskia.compose.foundation.layout.Placement.Vertical
+import io.kdomskia.compose.foundation.layout.ViewportContainer
 import io.kdomskia.compose.foundation.layout.WindowInsets
 import io.kdomskia.compose.foundation.layout.copy
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
@@ -86,7 +83,7 @@ fun RecipeListScreen(
 }
 
 @Composable
-private fun BoxScope.Header(
+private fun Header(
     modifier: Modifier = Modifier,
     pagerState: PagerState,
     contentPadding: PaddingValues,
@@ -96,16 +93,14 @@ private fun BoxScope.Header(
     val selectedTab = remember(pagerState.currentPage) {
         RecipeTab.entries[pagerState.currentPage]
     }
-    FloatingContainer(
-        horizontalPlacement = Horizontal.Fill(
-            paddingStart = contentPadding.start
-        ),
-        verticalPlacement = Vertical.AlignTop()
+    ViewportContainer(
+        contentAlignment = Alignment.TopStart
     ) {
         BoxWithConstraints(
             modifier = modifier
                 .fillMaxWidth()
-                .background(MaterialTheme.colorScheme.background),
+                .background(MaterialTheme.colorScheme.background)
+                .padding(start = contentPadding.start),
             contentAlignment = Alignment.Center
         ) {
             Column(
@@ -174,19 +169,22 @@ private fun Tabs(
 }
 
 @Composable
-private fun BoxScope.FloatingButtonContainer() {
+private fun FloatingButtonContainer() {
     if (isWindowWidthExpanded.not()) {
         val paddingEnd = dimens.paddingExtraLarge
         val paddingBottom = paddingEnd + WindowInsets.safeDrawing.getBottom()
-        FloatingContainer(
-            horizontalPlacement = Horizontal.AlignEnd(
-                paddingEnd = paddingEnd
-            ),
-            verticalPlacement = Vertical.AlignBottom(
-                paddingBottom = paddingBottom
-            )
+
+        ViewportContainer(
+            contentAlignment = Alignment.BottomEnd
         ) {
-            EditFloatingActionButton()
+            Box(
+                modifier = Modifier.padding(
+                    end = paddingEnd,
+                    bottom = paddingBottom
+                )
+            ) {
+                EditFloatingActionButton()
+            }
         }
     }
 }

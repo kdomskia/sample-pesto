@@ -29,6 +29,10 @@ sealed interface AppDestination {
     @SerialName("settings")
     object Settings : AppDestination
 
+    @Serializable
+    @SerialName("about")
+    object About : AppDestination
+
     companion object {
 
         val entries = listOf(
@@ -36,7 +40,8 @@ sealed interface AppDestination {
             RecipeDetail::class,
             Notes::class,
             Account::class,
-            Settings::class
+            Settings::class,
+            About::class
         )
 
     }
@@ -48,6 +53,7 @@ fun AppDestination.getMenuItem(): NavigationMenuItem = when (this) {
     AppDestination.RecipeList, is AppDestination.RecipeDetail -> NavigationMenuItem.Recipes
     AppDestination.Account -> NavigationMenuItem.Account
     AppDestination.Settings -> NavigationMenuItem.Settings
+    AppDestination.About -> NavigationMenuItem.About
 }
 
 fun AppDestination.getActionType(): RootAction = when (this) {

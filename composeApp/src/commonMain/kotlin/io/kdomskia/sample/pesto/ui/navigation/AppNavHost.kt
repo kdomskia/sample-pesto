@@ -10,6 +10,7 @@ import io.kdomskia.compose.ui.Modifier
 import io.kdomskia.navigation.compose.NavHost
 import io.kdomskia.navigation.compose.composable
 import io.kdomskia.sample.pesto.ui.navigation.destination.AppDestination
+import io.kdomskia.sample.pesto.ui.screen.about.AboutScreen
 import io.kdomskia.sample.pesto.ui.screen.account.AccountScreen
 import io.kdomskia.sample.pesto.ui.screen.notes.NotesScreen
 import io.kdomskia.sample.pesto.ui.screen.recipe.RecipeDetailScreen
@@ -67,6 +68,15 @@ fun AppNavHost(
             route = AppDestination.Settings::class
         ) {
             SettingsScreen(
+                contentPadding = contentPadding,
+                onClose = { navController.navigateUp() }
+            )
+        }
+
+        composable(
+            route = AppDestination.About::class
+        ) {
+            AboutScreen(
                 contentPadding = contentPadding,
                 onClose = { navController.navigateUp() }
             )
