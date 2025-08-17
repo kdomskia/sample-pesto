@@ -1,26 +1,39 @@
 package io.kdomskia.sample.pesto.ui.screen.about
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 import io.kdomskia.compose.foundation.background
+import io.kdomskia.compose.foundation.dom.DomScrollOptions
+import io.kdomskia.compose.foundation.dom.DomScrollTarget
 import io.kdomskia.compose.foundation.layout.Column
 import io.kdomskia.compose.foundation.layout.ColumnScope
 import io.kdomskia.compose.foundation.layout.PaddingValues
 import io.kdomskia.compose.foundation.layout.Spacer
+import io.kdomskia.compose.foundation.layout.ViewportContainer
+import io.kdomskia.compose.foundation.layout.copy
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
 import io.kdomskia.compose.foundation.layout.height
 import io.kdomskia.compose.foundation.layout.padding
+import io.kdomskia.compose.foundation.layout.top
 import io.kdomskia.compose.foundation.layout.widthIn
+import io.kdomskia.compose.foundation.rememberScrollState
+import io.kdomskia.compose.foundation.verticalScroll
 import io.kdomskia.compose.material3.MaterialTheme
 import io.kdomskia.compose.material3.Text
 import io.kdomskia.compose.material3.TextButton
 import io.kdomskia.compose.navigation.NavExternalLink
 import io.kdomskia.compose.ui.Alignment
 import io.kdomskia.compose.ui.Modifier
+import io.kdomskia.compose.ui.layout.onGloballyPositioned
+import io.kdomskia.compose.ui.unit.pxToDp
 import io.kdomskia.sample.pesto.data.external.ExternalLink
 import io.kdomskia.sample.pesto.ui.component.AppBar
 import io.kdomskia.sample.pesto.ui.component.AppBarIconType
@@ -32,76 +45,28 @@ fun AboutScreen(
     contentPadding: PaddingValues,
     onClose: () -> Unit
 ) {
+    var headerHeight by remember { mutableStateOf(0) }
+    val padding = contentPadding.copy(top = contentPadding.top + headerHeight.pxToDp())
+
+    ViewportContainer(
+        contentAlignment = Alignment.TopCenter
+    ) {
+        AppBar(
+            modifier = Modifier.onGloballyPositioned {
+                headerHeight = it.size.height
+            },
+            onIconClick = onClose,
+            iconType = AppBarIconType.Close
+        )
+    }
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.background)
-            .padding(contentPadding),
+            .padding(padding),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        AppBar(
-            onIconClick = onClose,
-            iconType = AppBarIconType.Close
-        )
         AboutContent()
-
-//        val annotated = AnnotatedString.Builder().apply {
-//            // Paragraph 1: Centered with line height
-//            pushStyle(ParagraphStyle(textAlign = TextAlign.Center, lineHeight = 28.sp))
-//            append("Centered Paragraph:\n")
-//
-//            pushStyle(SpanStyle(color = Color.Red, fontWeight = FontWeight.Bold))
-//            append("Bold Red")
-//            pop()
-//
-//            append(" + ")
-//
-//            pushStyle(SpanStyle(fontStyle = FontStyle.Italic))
-//            append("Italic")
-//            pop()
-//
-//            append(" + ")
-//
-//            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline))
-//            append("Underline")
-//            pop()
-//
-//            append(" + ")
-//
-//            pushStyle(SpanStyle(textDecoration = TextDecoration.LineThrough))
-//            append("Strikethrough")
-//            pop()
-//
-//            append(" + ")
-//
-//            pushStyle(SpanStyle(textDecoration = TextDecoration.Underline + TextDecoration.LineThrough))
-//            append("Underline + Strikethrough")
-//            pop()
-//
-//            append(" + ")
-//
-//            pushStyle(SpanStyle(fontSize = 24.sp, color = Color.Magenta))
-//            append("Big Pink Text")
-//            pop()
-//            pop() // end ParagraphStyle
-//
-//            append("\n")
-//
-//            // Paragraph 2: Justified with a link
-//            pushStyle(ParagraphStyle(textAlign = TextAlign.Justify))
-//            append("This is a justified paragraph with a clickable ")
-//
-//            pushStyle(SpanStyle(color = Color.Blue))
-//            pushStringAnnotation("URL", "https://example.com")
-//            append("link")
-//            pop() // URL
-//            pop() // SpanStyle
-//
-//            append(" and normal text after.")
-//            pop() // ParagraphStyle
-//        }.toAnnotatedString()
-
-
     }
 }
 
@@ -147,6 +112,12 @@ private fun ColumnScope.AboutContent() {
             .widthIn(max = dimens.aboutMaxWidth)
             .weight(1f)
             .padding(dimens.paddingLarge)
+            .verticalScroll(
+                state = rememberScrollState(),
+                domOptions = DomScrollOptions(
+                    target = DomScrollTarget.Window
+                )
+            )
     ) {
         Spacer(modifier = Modifier.height(dimens.paddingLarge))
         Text(
