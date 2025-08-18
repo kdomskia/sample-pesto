@@ -13,4 +13,9 @@ class RecipeResource() {
         val id: String
     )
 
+    @Resource("favorites")
+    class Favorites(
+        val parent: RecipeResource = RecipeResource()
+    )
+
 }

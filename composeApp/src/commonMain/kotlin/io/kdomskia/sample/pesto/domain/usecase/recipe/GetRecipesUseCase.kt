@@ -8,8 +8,11 @@ class GetRecipesUseCase(
     private val repository: RecipeRepository
 ) {
 
-    operator fun invoke(): Flow<GetRecipesResult> {
-        return repository.getRecipes()
+    operator fun invoke(favoritesOnly: Boolean): Flow<GetRecipesResult> {
+        return if (favoritesOnly)
+            repository.getFavoriteRecipes()
+        else
+            repository.getRecipes()
     }
 
 }

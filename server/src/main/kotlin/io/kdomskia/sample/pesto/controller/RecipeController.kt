@@ -32,14 +32,29 @@ class RecipeController {
     }
 
     @GetMapping
-    fun findAll(): List<Recipe> {
+    fun getAll(): List<Recipe> {
         return recipes
     }
 
     @OptIn(ExperimentalSerializationApi::class)
     @GetMapping("/{id}")
-    fun findById(@PathVariable id: String): Recipe {
+    fun getById(@PathVariable id: String): Recipe {
         return recipes.first { it.id == id }
+    }
+
+    @GetMapping("/favorites")
+    fun getFavorites(): List<Recipe> {
+        val favoritesId = listOf(
+            "c3d4e5f6a7b80123456789cd",
+            "f6a7b8c9d0e1234567890fab",
+            "e5f6a7b8c9d0123456789efa",
+            "a7b8c9d0e1f234567890abcd",
+            "e1f2a3b4c5d678901234ef01",
+            "c5d6e7f8a9b012345678f345",
+            "e7f8a9b0c1d234567890f567",
+            "a9b0c1d2e3f456789012f789"
+        )
+        return recipes.filter { it.id in favoritesId }
     }
 
 }

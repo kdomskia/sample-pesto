@@ -14,14 +14,15 @@ import io.kdomskia.compose.foundation.background
 import io.kdomskia.compose.foundation.dom.DomScrollOptions
 import io.kdomskia.compose.foundation.dom.DomScrollTarget
 import io.kdomskia.compose.foundation.layout.Column
-import io.kdomskia.compose.foundation.layout.ColumnScope
 import io.kdomskia.compose.foundation.layout.PaddingValues
 import io.kdomskia.compose.foundation.layout.Spacer
 import io.kdomskia.compose.foundation.layout.ViewportContainer
+import io.kdomskia.compose.foundation.layout.WindowInsets
 import io.kdomskia.compose.foundation.layout.copy
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
 import io.kdomskia.compose.foundation.layout.height
 import io.kdomskia.compose.foundation.layout.padding
+import io.kdomskia.compose.foundation.layout.safeDrawing
 import io.kdomskia.compose.foundation.layout.top
 import io.kdomskia.compose.foundation.layout.widthIn
 import io.kdomskia.compose.foundation.rememberScrollState
@@ -37,6 +38,7 @@ import io.kdomskia.compose.ui.unit.pxToDp
 import io.kdomskia.sample.pesto.data.external.ExternalLink
 import io.kdomskia.sample.pesto.ui.component.AppBar
 import io.kdomskia.sample.pesto.ui.component.AppBarIconType
+import io.kdomskia.sample.pesto.ui.extension.getBottom
 import io.kdomskia.sample.pesto.ui.res.dimens
 import io.kdomskia.sample.pesto.ui.res.strings
 
@@ -46,7 +48,7 @@ fun AboutScreen(
     onClose: () -> Unit
 ) {
     var headerHeight by remember { mutableStateOf(0) }
-    val padding = contentPadding.copy(top = contentPadding.top + headerHeight.pxToDp())
+    val rootPaddingTop = contentPadding.top + headerHeight.pxToDp()
 
     ViewportContainer(
         contentAlignment = Alignment.TopCenter
@@ -63,7 +65,13 @@ fun AboutScreen(
         modifier = Modifier
             .fillMaxWidth()
             .background(MaterialTheme.colorScheme.background)
-            .padding(padding),
+            .padding(top = rootPaddingTop)
+            .verticalScroll(
+                state = rememberScrollState(),
+                domOptions = DomScrollOptions(
+                    target = DomScrollTarget.Window
+                )
+            ),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         AboutContent()
@@ -71,7 +79,10 @@ fun AboutScreen(
 }
 
 @Composable
-private fun ColumnScope.AboutContent() {
+private fun AboutContent() {
+    val padding = PaddingValues(dimens.paddingLarge).copy(
+        bottom = dimens.paddingLarge + WindowInsets.safeDrawing.getBottom()
+    )
     val text = buildAnnotatedString {
         append(strings.aboutLine1Part1)
         withStyle(
@@ -110,14 +121,7 @@ private fun ColumnScope.AboutContent() {
     Column(
         modifier = Modifier
             .widthIn(max = dimens.aboutMaxWidth)
-            .weight(1f)
-            .padding(dimens.paddingLarge)
-            .verticalScroll(
-                state = rememberScrollState(),
-                domOptions = DomScrollOptions(
-                    target = DomScrollTarget.Window
-                )
-            )
+            .padding(padding)
     ) {
         Spacer(modifier = Modifier.height(dimens.paddingLarge))
         Text(

@@ -15,4 +15,6 @@ interface RecipeRepository {
 
     fun getRecipe(id: String): Flow<GetRecipeResult>
 
+    fun getFavoriteRecipes(): Flow<GetRecipesResult>
+
 }

@@ -1,6 +1,7 @@
 package io.kdomskia.sample.pesto.ui.screen.recipe
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -38,6 +39,7 @@ import io.kdomskia.sample.pesto.ui.component.ErrorStateContainer
 import io.kdomskia.sample.pesto.ui.component.recipe.RecipeList
 import io.kdomskia.sample.pesto.ui.extension.getBottom
 import io.kdomskia.sample.pesto.ui.extension.use
+import io.kdomskia.sample.pesto.ui.model.fetch.FetchState
 import io.kdomskia.sample.pesto.ui.model.recipe.RecipeItemsViewModel
 import io.kdomskia.sample.pesto.ui.model.recipe.RecipeTab
 import io.kdomskia.sample.pesto.ui.res.dimens
@@ -194,8 +196,18 @@ private fun RecipesContent(
     tab: RecipeTab,
     contentPadding: PaddingValues
 ) {
-    val viewModel = koinViewModel<RecipeItemsViewModel>()
+    val viewModel = koinViewModel<RecipeItemsViewModel>(key = tab.name)
     val state by viewModel.recipes.collectAsStateWithLifecycle()
+    val fetchRecipes = {
+        val favoritesOnly = tab == RecipeTab.Favorites
+        viewModel.fetchRecipes(favoritesOnly)
+    }
+
+    LaunchedEffect(tab) {
+        if (state !is FetchState.Success) {
+            fetchRecipes()
+        }
+    }
 
     state.use(
         success = {
@@ -207,7 +219,7 @@ private fun RecipesContent(
         error = {
             ErrorStateContainer(
                 modifier = Modifier.padding(contentPadding),
-                onTryAgain = viewModel::fetchRecipes
+                onTryAgain = fetchRecipes
             )
         }
     )

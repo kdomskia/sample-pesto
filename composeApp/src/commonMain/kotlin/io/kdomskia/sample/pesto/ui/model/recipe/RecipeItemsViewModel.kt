@@ -21,13 +21,11 @@ class RecipeItemsViewModel(
 
     val recipes = _recipes.asStateFlow()
 
-    init {
-        fetchRecipes()
-    }
-
-    fun fetchRecipes() {
+    fun fetchRecipes(favoritesOnly: Boolean) {
         viewModelScope.launch {
-            getRecipesUseCase().collectAsFetchState {
+            getRecipesUseCase(
+                favoritesOnly = favoritesOnly
+            ).collectAsFetchState {
                 _recipes.value = it
             }
         }

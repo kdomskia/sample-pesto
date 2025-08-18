@@ -17,4 +17,6 @@ class RecipeRepositoryImpl(
 
     override fun getRecipe(id: String): Flow<GetRecipeResult> = httpClient.fetchResult { get(RecipeResource.Get(id = id)) }
 
+    override fun getFavoriteRecipes(): Flow<GetRecipesResult> = httpClient.fetchResult { get(RecipeResource.Favorites()) }
+
 }
