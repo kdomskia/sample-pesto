@@ -36,6 +36,7 @@ import io.kdomskia.sample.pesto.ui.component.AppBar
 import io.kdomskia.sample.pesto.ui.component.AppBarIconType
 import io.kdomskia.sample.pesto.ui.component.EditFloatingActionButton
 import io.kdomskia.sample.pesto.ui.component.ErrorStateContainer
+import io.kdomskia.sample.pesto.ui.component.MaxSizedCircularProgressIndicator
 import io.kdomskia.sample.pesto.ui.component.recipe.RecipeList
 import io.kdomskia.sample.pesto.ui.extension.getBottom
 import io.kdomskia.sample.pesto.ui.extension.use
@@ -210,6 +211,11 @@ private fun RecipesContent(
     }
 
     state.use(
+        loading = {
+            MaxSizedCircularProgressIndicator(
+                modifier = Modifier.padding(contentPadding)
+            )
+        },
         success = {
             RecipeList(
                 recipes = it,

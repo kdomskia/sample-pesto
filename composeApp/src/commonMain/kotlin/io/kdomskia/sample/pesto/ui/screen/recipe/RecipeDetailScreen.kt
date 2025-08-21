@@ -58,6 +58,7 @@ import io.kdomskia.sample.pesto.ic_recipes
 import io.kdomskia.sample.pesto.ui.component.AppBar
 import io.kdomskia.sample.pesto.ui.component.AppBarIconType
 import io.kdomskia.sample.pesto.ui.component.ErrorStateContainer
+import io.kdomskia.sample.pesto.ui.component.MaxSizedCircularProgressIndicator
 import io.kdomskia.sample.pesto.ui.component.recipe.RecipeImage
 import io.kdomskia.sample.pesto.ui.extension.getBottom
 import io.kdomskia.sample.pesto.ui.extension.icon
@@ -96,6 +97,11 @@ fun RecipeDetailScreen(
     }
 
     state.use(
+        loading = {
+            MaxSizedCircularProgressIndicator(
+                modifier = Modifier.padding(contentPadding)
+            )
+        },
         success = {
             RecipeDetailContent(
                 contentPadding = contentPadding,
@@ -105,6 +111,7 @@ fun RecipeDetailScreen(
         },
         error = {
             ErrorStateContainer(
+                modifier = Modifier.padding(contentPadding),
                 onTryAgain = {
                     viewModel.fetchRecipe(recipeId)
                 }
