@@ -3,6 +3,7 @@ package io.kdomskia.sample.pesto.controller
 import java.io.IOException
 import org.springframework.core.io.ClassPathResource
 import org.springframework.core.io.InputStreamResource
+import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
@@ -22,6 +23,7 @@ class RecipeImageController {
             val resource = ClassPathResource("image/recipe/$recipeId.webp")
             return ResponseEntity
                 .status(HttpStatus.OK)
+                .header(HttpHeaders.CACHE_CONTROL, "public, max-age=86400")
                 .contentLength(resource.contentLength())
                 .contentType(MediaType.parseMediaType("image/webp"))
                 .body(InputStreamResource(resource.inputStream))

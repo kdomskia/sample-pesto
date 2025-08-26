@@ -1,32 +1,38 @@
 package io.kdomskia.sample.pesto.ui.theme
 
-import io.kdomskia.compose.material3.Typography
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import io.kdomskia.sample.pesto.Res
-import io.kdomskia.sample.pesto.lekton_bold
-import io.kdomskia.sample.pesto.lekton_regular
-import io.kdomskia.sample.pesto.montserrat_light
-import io.kdomskia.sample.pesto.montserrat_medium
-import io.kdomskia.sample.pesto.montserrat_regular
-import io.kdomskia.sample.pesto.montserrat_semibold
+import io.kdomskia.compose.material3.Typography
 import org.jetbrains.compose.resources.Font
+import org.jetbrains.compose.resources.FontResource
+
+expect val lekton_bold: FontResource
+
+expect val lekton_regular: FontResource
+
+expect val montserrat_light: FontResource
+
+expect val montserrat_regular: FontResource
+
+expect val montserrat_medium: FontResource
+
+expect val montserrat_semibold: FontResource
 
 val Typography: Typography
     @Composable
     get() {
         val montserrat = FontFamily(
-            Font(resource = Res.font.montserrat_regular, weight = FontWeight.Normal),
-            Font(resource = Res.font.montserrat_medium, weight = FontWeight.Medium),
-            Font(resource = Res.font.montserrat_light, weight = FontWeight.Light),
-            Font(resource = Res.font.montserrat_semibold, weight = FontWeight.SemiBold)
+            Font(resource = montserrat_regular, weight = FontWeight.Normal),
+            Font(resource = montserrat_medium, weight = FontWeight.Medium),
+            Font(resource = montserrat_light, weight = FontWeight.Light),
+            Font(resource = montserrat_semibold, weight = FontWeight.SemiBold)
         )
         val lekton = FontFamily(
-            Font(resource = Res.font.lekton_regular, weight = FontWeight.Normal),
-            Font(resource = Res.font.lekton_bold, weight = FontWeight.Bold)
+            Font(resource = lekton_regular, weight = FontWeight.Normal),
+            Font(resource = lekton_bold, weight = FontWeight.Bold)
         )
 
         return Typography(
