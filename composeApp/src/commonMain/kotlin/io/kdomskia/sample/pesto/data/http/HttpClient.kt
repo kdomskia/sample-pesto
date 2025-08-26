@@ -10,7 +10,7 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.appendIfNameAbsent
 import kotlinx.serialization.json.Json
 
-const val BASE_URL = "https://api.pesto2.kdomskia.io"
+const val BASE_URL = "https://api.pesto.kdomskia.io"
 
 fun provideHttpClient() = HttpClient {
     defaultRequest {
