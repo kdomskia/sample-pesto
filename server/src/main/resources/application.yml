@@ -2,4 +2,4 @@ server:
   port: ${default_port:8080}
 spring:
   application:
-    name: kotlin-ie2-spring-pesto
+    name: sample-pesto-server
