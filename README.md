@@ -22,6 +22,19 @@ It is powered by [Kdomskia](https://github.com/kdomskia/kdomskia) to unify UI ac
 * [/shared](./shared/src) contains code that is shared across all modules (backend and frontend).  
   The most important subfolder is [commonMain](./shared/src/commonMain/kotlin). Platform-specific folders can also be used if needed.
 
+## Setup
+
+Before running the project, make sure to configure the  `BASE_URL` in:
+> composeApp/src/commonMain/kotlin/io/kdomskia/sample/pesto/data/http/HttpClient.kt
+
+Set it to the local IP address of the server you intend to run. For example:
+```kotlin
+//Local Server
+private val BASE_URL = "http://192.168.0.1:8080"
+//Public Kdomskia Pesto API
+private val BASE_URL = "https://api.pesto.kdomskia.io"
+```
+
 ## Build and Run Server
 
 To build and run the development version of the server (Spring Boot), use the run configuration from the IDE toolbar  

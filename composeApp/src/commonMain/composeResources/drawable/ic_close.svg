@@ -1,1 +1,16 @@
-<svg id="vector" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="#356859" d="M2.4,15.2L0.8,13.6L6.4,8L0.8,2.4L2.4,0.8L8,6.4L13.6,0.8L15.2,2.4L9.6,8L15.2,13.6L13.6,15.2L8,9.6L2.4,15.2Z" id="path_0"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   height="24px"
+   viewBox="0 -960 960 960"
+   width="24px"
+   fill="#356859"
+   version="1.1"
+   id="svg183"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs187" />
+  <path
+     id="path181"
+     d="M 216.01563,-800 160,-743.98437 423.98438,-480 160,-216.01563 216.01563,-160 480,-423.98437 744.0625,-160 800,-216.01563 536.01563,-480 800,-743.98437 744.0625,-800 480,-536.01563 Z" />
+</svg>

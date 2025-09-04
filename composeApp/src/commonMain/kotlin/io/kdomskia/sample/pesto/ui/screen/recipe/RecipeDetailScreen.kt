@@ -141,7 +141,7 @@ private fun RecipeDetailContent(
         ) {
             Box(
                 modifier = Modifier
-                    .fillViewportWidth()
+                    .fillMaxWidth()
                     .padding(start = paddingStart)
             ) {
                 AppBar(

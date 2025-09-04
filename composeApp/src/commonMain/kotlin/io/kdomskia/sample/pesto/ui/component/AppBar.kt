@@ -6,9 +6,8 @@ import io.kdomskia.compose.foundation.Image
 import io.kdomskia.compose.foundation.layout.WindowInsets
 import io.kdomskia.compose.foundation.layout.fillMaxWidth
 import io.kdomskia.compose.foundation.layout.height
+import io.kdomskia.compose.material3.CenterAlignedTopAppBar
 import io.kdomskia.compose.material3.IconButton
-import io.kdomskia.compose.material3.TopAppBar
-import io.kdomskia.compose.ui.Alignment
 import io.kdomskia.compose.ui.Modifier
 import io.kdomskia.compose.ui.resource.img
 import io.kdomskia.sample.pesto.Res
@@ -28,7 +27,7 @@ fun AppBar(
     logoHeight: Dp = dimens.appBarLogoHeight,
     logoPadding: Dp = dimens.paddingMedium
 ) {
-    TopAppBar(
+    CenterAlignedTopAppBar(
         modifier = modifier.fillMaxWidth(),
         title = {
             AppLogo(
@@ -51,7 +50,6 @@ fun AppBar(
             if (isWindowWidthExpanded.not())
                 PestoRepositoryIconButton()
         },
-        titleHorizontalAlignment = Alignment.CenterHorizontally,
         expandedHeight = logoHeight + logoPadding,
         windowInsets = WindowInsets()
     )

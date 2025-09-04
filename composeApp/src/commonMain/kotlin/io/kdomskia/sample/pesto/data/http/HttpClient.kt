@@ -10,7 +10,11 @@ import io.ktor.serialization.kotlinx.json.json
 import io.ktor.util.appendIfNameAbsent
 import kotlinx.serialization.json.Json
 
-const val BASE_URL = "https://api.pesto.kdomskia.io"
+private val BASE_URL: String = TODO("Configure server address here")
+// - For local development, point to your server’s IP address:
+//private val BASE_URL = "http://192.168.0.1:8080"
+// - Or use the public Kdomskia Pesto API:
+//private val BASE_URL = "https://api.pesto.kdomskia.io"
 
 fun provideHttpClient() = HttpClient {
     defaultRequest {
